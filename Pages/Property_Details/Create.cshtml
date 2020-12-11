@@ -1,0 +1,49 @@
+﻿@page
+@model PropertyManagement.Pages.Property_Details.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Property_Detail</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Property_Detail.Property_Type" class="control-label"></label>
+                <input asp-for="Property_Detail.Property_Type" class="form-control" />
+                <span asp-validation-for="Property_Detail.Property_Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property_Detail.Area" class="control-label"></label>
+                <input asp-for="Property_Detail.Area" class="form-control" />
+                <span asp-validation-for="Property_Detail.Area" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property_Detail.Price" class="control-label"></label>
+                <input asp-for="Property_Detail.Price" class="form-control" />
+                <span asp-validation-for="Property_Detail.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property_Detail.Facilities" class="control-label"></label>
+                <input asp-for="Property_Detail.Facilities" class="form-control" />
+                <span asp-validation-for="Property_Detail.Facilities" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
