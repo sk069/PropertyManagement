@@ -7,9 +7,9 @@ using PropertyManagement.Models;
 
 namespace PropertyManagement.Data
 {
-    public class PropertyManagementDatabase : DbContext
+    public class PropertyManagement_Database : DbContext
     {
-        public PropertyManagementDatabase (DbContextOptions<PropertyManagementDatabase> options)
+        public PropertyManagement_Database (DbContextOptions<PropertyManagement_Database> options)
             : base(options)
         {
         }

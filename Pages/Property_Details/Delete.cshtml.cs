@@ -12,9 +12,9 @@ namespace PropertyManagement.Pages.Property_Details
 {
     public class DeleteModel : PageModel
     {
-        private readonly PropertyManagement.Data.PropertyManagementDatabase _context;
+        private readonly PropertyManagement.Data.PropertyManagement_Database _context;
 
-        public DeleteModel(PropertyManagement.Data.PropertyManagementDatabase context)
+        public DeleteModel(PropertyManagement.Data.PropertyManagement_Database context)
         {
             _context = context;
         }

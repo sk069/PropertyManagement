@@ -17,13 +17,13 @@
                 @Html.DisplayNameFor(model => model.Property_Oction[0].Bid_Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Property_Oction[0].Property_Id)
+                @Html.DisplayNameFor(model => model.Property_Oction[0].Property_Detail)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Property_Oction[0].Customer_Id)
+                @Html.DisplayNameFor(model => model.Property_Oction[0].Customer_Detail)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Property_Oction[0].Dealer_Id)
+                @Html.DisplayNameFor(model => model.Property_Oction[0].Dealer_Detail)
             </th>
             <th></th>
         </tr>
@@ -35,13 +35,13 @@
                 @Html.DisplayFor(modelItem => item.Bid_Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Property_Id)
+                @Html.DisplayFor(modelItem => item.Property_Detail.Area)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Customer_Id)
+                @Html.DisplayFor(modelItem => item.Customer_Detail.Customer_Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Dealer_Id)
+                @Html.DisplayFor(modelItem => item.Dealer_Detail.Dealer_Name)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |

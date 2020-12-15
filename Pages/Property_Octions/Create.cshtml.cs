@@ -12,15 +12,18 @@ namespace PropertyManagement.Pages.Property_Octions
 {
     public class CreateModel : PageModel
     {
-        private readonly PropertyManagement.Data.PropertyManagementDatabase _context;
+        private readonly PropertyManagement.Data.PropertyManagement_Database _context;
 
-        public CreateModel(PropertyManagement.Data.PropertyManagementDatabase context)
+        public CreateModel(PropertyManagement.Data.PropertyManagement_Database context)
         {
             _context = context;
         }
 
         public IActionResult OnGet()
         {
+        ViewData["Customer_DetailId"] = new SelectList(_context.Customer_Detail, "Id", "Customer_Name");
+        ViewData["Dealer_DetailId"] = new SelectList(_context.Dealer_Detail, "Id", "Dealer_Name");
+        ViewData["Property_DetailId"] = new SelectList(_context.Property_Detail, "Id", "Area");
             return Page();
         }
 

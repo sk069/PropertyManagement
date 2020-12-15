@@ -12,9 +12,9 @@ namespace PropertyManagement.Pages.Customer_Details
 {
     public class DetailsModel : PageModel
     {
-        private readonly PropertyManagement.Data.PropertyManagementDatabase _context;
+        private readonly PropertyManagement.Data.PropertyManagement_Database _context;
 
-        public DetailsModel(PropertyManagement.Data.PropertyManagementDatabase context)
+        public DetailsModel(PropertyManagement.Data.PropertyManagement_Database context)
         {
             _context = context;
         }

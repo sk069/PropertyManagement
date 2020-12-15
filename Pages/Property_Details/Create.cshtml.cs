@@ -12,9 +12,9 @@ namespace PropertyManagement.Pages.Property_Details
 {
     public class CreateModel : PageModel
     {
-        private readonly PropertyManagement.Data.PropertyManagementDatabase _context;
+        private readonly PropertyManagement.Data.PropertyManagement_Database _context;
 
-        public CreateModel(PropertyManagement.Data.PropertyManagementDatabase context)
+        public CreateModel(PropertyManagement.Data.PropertyManagement_Database context)
         {
             _context = context;
         }

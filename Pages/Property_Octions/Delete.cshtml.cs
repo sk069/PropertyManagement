@@ -12,9 +12,9 @@ namespace PropertyManagement.Pages.Property_Octions
 {
     public class DeleteModel : PageModel
     {
-        private readonly PropertyManagement.Data.PropertyManagementDatabase _context;
+        private readonly PropertyManagement.Data.PropertyManagement_Database _context;
 
-        public DeleteModel(PropertyManagement.Data.PropertyManagementDatabase context)
+        public DeleteModel(PropertyManagement.Data.PropertyManagement_Database context)
         {
             _context = context;
         }
@@ -29,7 +29,10 @@ namespace PropertyManagement.Pages.Property_Octions
                 return NotFound();
             }
 
-            Property_Oction = await _context.Property_Oction.FirstOrDefaultAsync(m => m.Id == id);
+            Property_Oction = await _context.Property_Oction
+                .Include(p => p.Customer_Detail)
+                .Include(p => p.Dealer_Detail)
+                .Include(p => p.Property_Detail).FirstOrDefaultAsync(m => m.Id == id);
 
             if (Property_Oction == null)
             {

@@ -12,9 +12,9 @@ namespace PropertyManagement.Pages.Property_Details
 {
     public class IndexModel : PageModel
     {
-        private readonly PropertyManagement.Data.PropertyManagementDatabase _context;
+        private readonly PropertyManagement.Data.PropertyManagement_Database _context;
 
-        public IndexModel(PropertyManagement.Data.PropertyManagementDatabase context)
+        public IndexModel(PropertyManagement.Data.PropertyManagement_Database context)
         {
             _context = context;
         }

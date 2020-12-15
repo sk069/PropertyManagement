@@ -13,9 +13,9 @@ namespace PropertyManagement.Pages.Customer_Details
 {
     public class EditModel : PageModel
     {
-        private readonly PropertyManagement.Data.PropertyManagementDatabase _context;
+        private readonly PropertyManagement.Data.PropertyManagement_Database _context;
 
-        public EditModel(PropertyManagement.Data.PropertyManagementDatabase context)
+        public EditModel(PropertyManagement.Data.PropertyManagement_Database context)
         {
             _context = context;
         }

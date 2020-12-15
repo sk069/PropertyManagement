@@ -2,7 +2,7 @@
 
 namespace PropertyManagement.Migrations
 {
-    public partial class Propert : Migration
+    public partial class Property : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -61,12 +61,9 @@ namespace PropertyManagement.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Bid_Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Property_Id = table.Column<int>(type: "int", nullable: false),
-                    Property_DetailsId = table.Column<int>(type: "int", nullable: true),
-                    Customer_Id = table.Column<int>(type: "int", nullable: false),
-                    Customer_DetailId = table.Column<int>(type: "int", nullable: true),
-                    Dealer_Id = table.Column<int>(type: "int", nullable: false),
-                    Dealer_DetailsId = table.Column<int>(type: "int", nullable: true)
+                    Property_DetailId = table.Column<int>(type: "int", nullable: false),
+                    Customer_DetailId = table.Column<int>(type: "int", nullable: false),
+                    Dealer_DetailId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -76,19 +73,19 @@ namespace PropertyManagement.Migrations
                         column: x => x.Customer_DetailId,
                         principalTable: "Customer_Detail",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Property_Oction_Dealer_Detail_Dealer_DetailsId",
-                        column: x => x.Dealer_DetailsId,
+                        name: "FK_Property_Oction_Dealer_Detail_Dealer_DetailId",
+                        column: x => x.Dealer_DetailId,
                         principalTable: "Dealer_Detail",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Property_Oction_Property_Detail_Property_DetailsId",
-                        column: x => x.Property_DetailsId,
+                        name: "FK_Property_Oction_Property_Detail_Property_DetailId",
+                        column: x => x.Property_DetailId,
                         principalTable: "Property_Detail",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -97,14 +94,14 @@ namespace PropertyManagement.Migrations
                 column: "Customer_DetailId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Property_Oction_Dealer_DetailsId",
+                name: "IX_Property_Oction_Dealer_DetailId",
                 table: "Property_Oction",
-                column: "Dealer_DetailsId");
+                column: "Dealer_DetailId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Property_Oction_Property_DetailsId",
+                name: "IX_Property_Oction_Property_DetailId",
                 table: "Property_Oction",
-                column: "Property_DetailsId");
+                column: "Property_DetailId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -13,9 +13,9 @@ namespace PropertyManagement.Pages.Property_Octions
 {
     public class EditModel : PageModel
     {
-        private readonly PropertyManagement.Data.PropertyManagementDatabase _context;
+        private readonly PropertyManagement.Data.PropertyManagement_Database _context;
 
-        public EditModel(PropertyManagement.Data.PropertyManagementDatabase context)
+        public EditModel(PropertyManagement.Data.PropertyManagement_Database context)
         {
             _context = context;
         }
@@ -30,12 +30,18 @@ namespace PropertyManagement.Pages.Property_Octions
                 return NotFound();
             }
 
-            Property_Oction = await _context.Property_Oction.FirstOrDefaultAsync(m => m.Id == id);
+            Property_Oction = await _context.Property_Oction
+                .Include(p => p.Customer_Detail)
+                .Include(p => p.Dealer_Detail)
+                .Include(p => p.Property_Detail).FirstOrDefaultAsync(m => m.Id == id);
 
             if (Property_Oction == null)
             {
                 return NotFound();
             }
+           ViewData["Customer_DetailId"] = new SelectList(_context.Customer_Detail, "Id", "Customer_Name");
+           ViewData["Dealer_DetailId"] = new SelectList(_context.Dealer_Detail, "Id", "Dealer_Name");
+           ViewData["Property_DetailId"] = new SelectList(_context.Property_Detail, "Id", "Area");
             return Page();
         }
 

@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PropertyManagement.Data;
 
-
 namespace PropertyManagement
 {
     public class Startup
@@ -28,8 +27,10 @@ namespace PropertyManagement
         {
             services.AddRazorPages();
 
-            services.AddDbContext<PropertyManagementDatabase>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("PropertyManagementDatabase")));
+            services.AddDbContext<PropertyManagement_Database>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("PropertyManagement_Database")));
+
+           
 
            
         }
