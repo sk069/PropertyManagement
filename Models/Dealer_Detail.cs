@@ -10,7 +10,7 @@ namespace PropertyManagement.Models
     public class Dealer_Detail
     {
 
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public string Dealer_Name { get; set; }

@@ -11,21 +11,21 @@ namespace PropertyManagement.Models
     //The class contains Oction details for property like, Oction ID and Bid price. Also, it contains foriegn key of Property Id,Customer Id, and Dealer ID.
     // This class is linked with Dealer details class, customer dtail class and property detail class.
 
-    public int ID { get; set; }
+    public int Id { get; set; }
 
     [Required]
     public Decimal Bid_Price { get; set; }
 
-    public int Property_ID { get; set; }
-    public Property_Detail Obj_property_Details { get; set; }
+    public int Property_Id { get; set; }
+    public Property_Detail Property_Details { get; set; }
 
-    public int Customer_ID { get; set; }
+    public int Customer_Id { get; set; }
 
-    public Customer_Detail Obj_Customer_Detail { get; set; }
+    public Customer_Detail Customer_Detail { get; set; }
 
-    public int Dealer_ID { get; set; }
+    public int Dealer_Id { get; set; }
 
-    public Dealer_Detail Obj_Dealer_Details { get; set; }
+    public Dealer_Detail Dealer_Details { get; set; }
 
 }
 }

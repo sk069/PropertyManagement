@@ -17,13 +17,13 @@
                 @Html.DisplayNameFor(model => model.Property_Oction[0].Bid_Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Property_Oction[0].Property_ID)
+                @Html.DisplayNameFor(model => model.Property_Oction[0].Property_Id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Property_Oction[0].Customer_ID)
+                @Html.DisplayNameFor(model => model.Property_Oction[0].Customer_Id)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Property_Oction[0].Dealer_ID)
+                @Html.DisplayNameFor(model => model.Property_Oction[0].Dealer_Id)
             </th>
             <th></th>
         </tr>
@@ -35,18 +35,18 @@
                 @Html.DisplayFor(modelItem => item.Bid_Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Property_ID)
+                @Html.DisplayFor(modelItem => item.Property_Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Customer_ID)
+                @Html.DisplayFor(modelItem => item.Customer_Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Dealer_ID)
+                @Html.DisplayFor(modelItem => item.Dealer_Id)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }

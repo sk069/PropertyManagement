@@ -29,7 +29,7 @@ namespace PropertyManagement.Pages.Customer_Details
                 return NotFound();
             }
 
-            Customer_Detail = await _context.Customer_Detail.FirstOrDefaultAsync(m => m.ID == id);
+            Customer_Detail = await _context.Customer_Detail.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Customer_Detail == null)
             {

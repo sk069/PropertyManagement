@@ -9,7 +9,7 @@ namespace PropertyManagement.Models
     public class Customer_Detail
     {
 
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public string Customer_Name { get; set; }

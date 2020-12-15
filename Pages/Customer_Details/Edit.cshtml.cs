@@ -30,7 +30,7 @@ namespace PropertyManagement.Pages.Customer_Details
                 return NotFound();
             }
 
-            Customer_Detail = await _context.Customer_Detail.FirstOrDefaultAsync(m => m.ID == id);
+            Customer_Detail = await _context.Customer_Detail.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Customer_Detail == null)
             {
@@ -56,7 +56,7 @@ namespace PropertyManagement.Pages.Customer_Details
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Customer_DetailExists(Customer_Detail.ID))
+                if (!Customer_DetailExists(Customer_Detail.Id))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace PropertyManagement.Pages.Customer_Details
 
         private bool Customer_DetailExists(int id)
         {
-            return _context.Customer_Detail.Any(e => e.ID == id);
+            return _context.Customer_Detail.Any(e => e.Id == id);
         }
     }
 }

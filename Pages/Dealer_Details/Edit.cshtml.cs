@@ -30,7 +30,7 @@ namespace PropertyManagement.Pages.Dealer_Details
                 return NotFound();
             }
 
-            Dealer_Detail = await _context.Dealer_Detail.FirstOrDefaultAsync(m => m.ID == id);
+            Dealer_Detail = await _context.Dealer_Detail.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Dealer_Detail == null)
             {
@@ -56,7 +56,7 @@ namespace PropertyManagement.Pages.Dealer_Details
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Dealer_DetailExists(Dealer_Detail.ID))
+                if (!Dealer_DetailExists(Dealer_Detail.Id))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace PropertyManagement.Pages.Dealer_Details
 
         private bool Dealer_DetailExists(int id)
         {
-            return _context.Dealer_Detail.Any(e => e.ID == id);
+            return _context.Dealer_Detail.Any(e => e.Id == id);
         }
     }
 }

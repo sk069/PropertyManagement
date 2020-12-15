@@ -28,7 +28,7 @@ namespace PropertyManagement.Pages.Property_Details
                 return NotFound();
             }
 
-            Property_Detail = await _context.Property_Detail.FirstOrDefaultAsync(m => m.ID == id);
+            Property_Detail = await _context.Property_Detail.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Property_Detail == null)
             {

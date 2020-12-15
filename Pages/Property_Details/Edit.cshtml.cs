@@ -30,7 +30,7 @@ namespace PropertyManagement.Pages.Property_Details
                 return NotFound();
             }
 
-            Property_Detail = await _context.Property_Detail.FirstOrDefaultAsync(m => m.ID == id);
+            Property_Detail = await _context.Property_Detail.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Property_Detail == null)
             {
@@ -56,7 +56,7 @@ namespace PropertyManagement.Pages.Property_Details
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!Property_DetailExists(Property_Detail.ID))
+                if (!Property_DetailExists(Property_Detail.Id))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace PropertyManagement.Pages.Property_Details
 
         private bool Property_DetailExists(int id)
         {
-            return _context.Property_Detail.Any(e => e.ID == id);
+            return _context.Property_Detail.Any(e => e.Id == id);
         }
     }
 }

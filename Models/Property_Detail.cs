@@ -11,7 +11,7 @@ namespace PropertyManagement.Models
     public class Property_Detail
     {
 
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         public string Property_Type { get; set; }
         [Required]

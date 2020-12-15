@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PropertyManagement.Data;
 
+
 namespace PropertyManagement
 {
     public class Startup
@@ -29,6 +30,8 @@ namespace PropertyManagement
 
             services.AddDbContext<PropertyManagementDatabase>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("PropertyManagementDatabase")));
+
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

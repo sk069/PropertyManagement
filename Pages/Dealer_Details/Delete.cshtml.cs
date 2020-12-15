@@ -29,7 +29,7 @@ namespace PropertyManagement.Pages.Dealer_Details
                 return NotFound();
             }
 
-            Dealer_Detail = await _context.Dealer_Detail.FirstOrDefaultAsync(m => m.ID == id);
+            Dealer_Detail = await _context.Dealer_Detail.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Dealer_Detail == null)
             {
