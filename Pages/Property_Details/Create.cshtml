@@ -5,26 +5,26 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Add new Property</h1>
 
-<h4>Property_Detail</h4>
+<h4>Property Detail</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Property_Detail.Property_Type" class="control-label"></label>
+                <label asp-for="Property_Detail.Property_Type" class="control-label">Property Type</label>
                 <input asp-for="Property_Detail.Property_Type" class="form-control" />
                 <span asp-validation-for="Property_Detail.Property_Type" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Property_Detail.Area" class="control-label"></label>
+                <label asp-for="Property_Detail.Area" class="control-label">Property Area</label>
                 <input asp-for="Property_Detail.Area" class="form-control" />
                 <span asp-validation-for="Property_Detail.Area" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Property_Detail.Price" class="control-label"></label>
+                <label asp-for="Property_Detail.Price" class="control-label">Price of Property</label>
                 <input asp-for="Property_Detail.Price" class="form-control" />
                 <span asp-validation-for="Property_Detail.Price" class="text-danger"></span>
             </div>

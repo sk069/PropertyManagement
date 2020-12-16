@@ -5,31 +5,31 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Add new Dealer</h1>
 
-<h4>Dealer_Detail</h4>
+<h4>Dealer Detail</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Dealer_Detail.Dealer_Name" class="control-label"></label>
+                <label asp-for="Dealer_Detail.Dealer_Name" class="control-label">Dealer Name</label>
                 <input asp-for="Dealer_Detail.Dealer_Name" class="form-control" />
                 <span asp-validation-for="Dealer_Detail.Dealer_Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Dealer_Detail.Dealer_Address" class="control-label"></label>
+                <label asp-for="Dealer_Detail.Dealer_Address" class="control-label">Dealer Address</label>
                 <input asp-for="Dealer_Detail.Dealer_Address" class="form-control" />
                 <span asp-validation-for="Dealer_Detail.Dealer_Address" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Dealer_Detail.Mobile" class="control-label"></label>
+                <label asp-for="Dealer_Detail.Mobile" class="control-label">Phone No.</label>
                 <input asp-for="Dealer_Detail.Mobile" class="form-control" />
                 <span asp-validation-for="Dealer_Detail.Mobile" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Dealer_Detail.Email" class="control-label"></label>
+                <label asp-for="Dealer_Detail.Email" class="control-label">Email Address</label>
                 <input asp-for="Dealer_Detail.Email" class="form-control" />
                 <span asp-validation-for="Dealer_Detail.Email" class="text-danger"></span>
             </div>
