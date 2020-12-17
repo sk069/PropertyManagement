@@ -13,29 +13,32 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
+            Customer
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Property_Oction.Customer_Detail.Customer_Name)
+        </dd>
+
+        <dt class="col-sm-2">
+            Dealer
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Property_Oction.Dealer_Detail.Dealer_Name)
+        </dd>
+        <dt class="col-sm-2">
+            Property Area
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Property_Oction.Property_Detail.Area)
+        </dd>
+
+        <dt class="col-sm-2">
             Bid Price
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Property_Oction.Bid_Price)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Property_Oction.Property_Detail)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Property_Oction.Property_Detail.Area)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Property_Oction.Customer_Detail)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Property_Oction.Customer_Detail.Customer_Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Property_Oction.Dealer_Detail)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Property_Oction.Dealer_Detail.Dealer_Name)
-        </dd>
+
     </dl>
     
     <form method="post">

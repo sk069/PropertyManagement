@@ -19,13 +19,13 @@
     <thead>
         <tr>
             <th>
+                Customer
+            </th>
+            <th>
                 Dealer
             </th>
             <th>
                 Property Area
-            </th>
-            <th>
-                Customer
             </th>
             <th>
                 Bid Price
@@ -39,13 +39,15 @@
         <tr>
            
             <td>
-                @Html.DisplayFor(modelItem => item.Property_Detail.Area)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Customer_Detail.Customer_Name)
+               
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Dealer_Detail.Dealer_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Property_Detail.Area)
+               
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Bid_Price)
