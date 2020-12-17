@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System.IO;
 
 namespace PropertyManagement.Migrations
 {
@@ -102,6 +103,9 @@ namespace PropertyManagement.Migrations
                 name: "IX_Property_Oction_Property_DetailId",
                 table: "Property_Oction",
                 column: "Property_DetailId");
+            var sqlFile = Path.Combine(".\\DBScript", @"Database.sql");
+
+            migrationBuilder.Sql(File.ReadAllText(sqlFile));
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

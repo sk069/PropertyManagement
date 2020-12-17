@@ -5,25 +5,32 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<style>
+    h1 {
+        text-align: center
+    }
+</style>
+
+
+<h1>Customers</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create">Click for add new Customer</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Customer_Detail[0].Customer_Name)
+                Customer Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customer_Detail[0].Email)
+                Email Address
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customer_Detail[0].Phone)
+                Phone
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Customer_Detail[0].Address)
+               Address
             </th>
             <th></th>
         </tr>
